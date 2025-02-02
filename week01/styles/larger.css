@@ -1,0 +1,21 @@
+/* Larger screen styles */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+}
