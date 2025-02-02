@@ -9,12 +9,7 @@
     nav a {
         padding: 0.5rem 1rem;
     }
-
-    /* Card container layout using CSS Grid */
-    .card-container {
-        grid-template-columns: 2fr 1fr; /* Two columns: first one takes twice the width */
-    }
-
+    
     /* Adjust card padding for larger screens */
     .card {
         padding: 2.5rem; /* Increased padding for larger screens */
