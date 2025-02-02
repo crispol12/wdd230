@@ -75,6 +75,10 @@ main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr; /* Apilado en pantallas pequeñas */
+    gap: 1rem; /* Espacio entre tarjetas */
 }
 
 .card {
@@ -122,3 +126,4 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
