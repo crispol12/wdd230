@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --background-color: #ecf0f1;
-    --text-color: #333;
-    --accent-color: #e74c3c;
+    --primary-color: #1a2634;    /* Darker blue for better contrast with white */
+    --secondary-color: #0b6bb8;  /* Darker blue for better contrast with white */
+    --background-color: #f5f7f8; /* Slightly lighter background */
+    --text-color: #222222;      /* Darker text color for better contrast */
+    --accent-color: #c41e3a;    /* Darker red for better contrast */
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Open Sans', sans-serif;
 }
@@ -13,12 +13,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-secondary);
-    color: var(--text-color);
+    color: var(--text-color);    /* Now using darker text color */
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
+
 
 /* Header styles */
 header {
@@ -94,7 +95,7 @@ main {
 }
 
 .card h2 {
-    color: var(--primary-color);
+    color: #1a1a1a;             /* Darker text for headers */
     margin-top: 0;
     font-family: var(--font-primary);
 }
@@ -104,12 +105,8 @@ main {
     padding: 0;
 }
 
-.card ul li {
-    margin-bottom: 0.5rem;
-}
-
 .card ul li a {
-    color: var(--secondary-color);
+    color: #0a558c;            /* Darker blue for links that passes contrast check */
     text-decoration: none;
     font-weight: 600;
 }
