@@ -10,7 +10,10 @@
 }
 
 body {
-    font-family: var(--font-secondary); /* Usar Open Sans como fuente predeterminada */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
+    font-family: var(--font-secondary);
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
@@ -68,6 +71,7 @@ nav a:hover {
 }
 
 main {
+    flex: 1; /* Ocupa el espacio restante */
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
@@ -112,8 +116,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
-    font-family: var(--font-secondary); /* Open Sans para el pie de página */
+    margin-top: auto; /* Empuja el footer hacia abajo */
 }
 
 footer p {
