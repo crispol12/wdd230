@@ -204,7 +204,7 @@ h3 {
 
 /* Mobile-specific styles */
 .mobile .wireframe-content {
-    max-width: 400px; /* Ajuste específico para la versión móvil */
+    max-width: 600px; /* Ajuste específico para la versión móvil */
     margin: 0 auto;
 }
 
