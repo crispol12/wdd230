@@ -124,3 +124,9 @@ footer {
     padding: 1.5rem; /* Increased padding */
     margin-top: auto; /* Push footer to the bottom */
 }
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) { 
+    .card-container {
+        grid-template-columns: 2fr 1fr; /* Learning Activities es el doble de grande */
+    }
+}
