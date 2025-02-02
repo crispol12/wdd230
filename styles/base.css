@@ -88,6 +88,7 @@ main {
     padding: 2rem; /* Increased padding */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content from overflowing */
 }
 
 .card h2 {
@@ -123,10 +124,4 @@ footer {
     text-align: center;
     padding: 1.5rem; /* Increased padding */
     margin-top: auto; /* Push footer to the bottom */
-}
-/* Estilos para pantallas grandes */
-@media (min-width: 768px) { 
-    .card-container {
-        grid-template-columns: 2fr 1fr; /* Learning Activities es el doble de grande */
-    }
 }
