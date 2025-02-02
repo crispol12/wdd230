@@ -4,6 +4,7 @@
     nav ul {
         flex-direction: row;
         justify-content: center;
+        gap: 1rem; /* Added gap between navigation items */
     }
 
     nav a {
@@ -13,10 +14,17 @@
     /* Card container layout using CSS Grid */
     .card-container {
         grid-template-columns: 2fr 1fr; /* Two columns: first one takes twice the width */
+        gap: 2.5rem; /* Increased gap between cards */
     }
 
     /* Adjust card padding for larger screens */
     .card {
         padding: 2.5rem; /* Increased padding for larger screens */
+    }
+
+    /* Ensure main content maintains proper width */
+    main {
+        padding: 0 3rem; /* Increased padding for larger screens */
+        max-width: 1200px;
     }
 }
