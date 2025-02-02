@@ -1,5 +1,6 @@
-/* Larger screen styles */
+/* Styles for larger screens (768px or more) */
 @media (min-width: 768px) {
+    /* Navigation: Display links in a horizontal row */
     nav ul {
         flex-direction: row;
         justify-content: center;
@@ -9,14 +10,13 @@
         padding: 0.5rem 1rem;
     }
 
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
+    /* Card container layout using CSS Grid */
+    .card-container {
+        grid-template-columns: 2fr 1fr; /* Two columns: first one takes twice the width */
     }
 
+    /* Adjust card padding for larger screens */
     .card {
-        margin-bottom: 0;
+        padding: 2.5rem; /* Increased padding for larger screens */
     }
-    
 }

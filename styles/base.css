@@ -5,14 +5,15 @@
     --background-color: #ecf0f1;
     --text-color: #333;
     --accent-color: #e74c3c;
-    --font-primary: 'Montserrat', sans-serif; /* Fuente principal */
-    --font-secondary: 'Open Sans', sans-serif; /* Fuente secundaria */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
 }
 
+/* Flexbox layout for the body */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
+    min-height: 100vh; /* Take up at least 100% of the viewport height */
     font-family: var(--font-secondary);
     color: var(--text-color);
     background-color: var(--background-color);
@@ -21,18 +22,13 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary); /* Usar Montserrat para encabezados */
-    font-weight: 700; /* Montserrat en negrita para encabezados */
-    color: var(--primary-color);
-}
-
+/* Header styles */
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: 2rem; /* Increased padding */
     text-align: center;
-    font-family: var(--font-primary); /* Montserrat para el encabezado */
+    font-family: var(--font-primary);
 }
 
 header img {
@@ -43,6 +39,7 @@ header img {
     border: 3px solid var(--secondary-color);
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -52,7 +49,7 @@ nav ul {
     gap: 0.5rem;
     background-color: var(--primary-color);
     padding: 1rem;
-    font-family: var(--font-primary); /* Montserrat para la navegación */
+    font-family: var(--font-primary);
 }
 
 nav a {
@@ -62,7 +59,7 @@ nav a {
     display: block;
     text-align: center;
     transition: background-color 0.3s;
-    font-weight: 600; /* Open Sans semi-negrita para enlaces */
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -70,29 +67,33 @@ nav a:hover {
     border-radius: 4px;
 }
 
+/* Main content container */
 main {
-    flex: 1; /* Ocupa el espacio restante */
-    max-width: 1200px;
+    flex: 1; /* Take up remaining space */
+    max-width: 1400px; /* Increased max-width for larger screens */
     margin: 2rem auto;
-    padding: 0 1rem;
-
-    display: grid;
-    grid-template-columns: 1fr; /* Apilado en pantallas pequeñas */
-    gap: 1rem; /* Espacio entre tarjetas */
+    padding: 0 2rem; /* Increased padding */
 }
 
+/* Card container */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default (mobile) */
+    gap: 2rem;
+}
+
+/* Card styles */
 .card {
     background-color: white;
-    padding: 1.5rem;
+    padding: 2rem; /* Increased padding */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
 }
 
 .card h2 {
     color: var(--primary-color);
     margin-top: 0;
-    font-family: var(--font-primary); /* Montserrat para títulos de tarjetas */
+    font-family: var(--font-primary);
 }
 
 .card ul {
@@ -102,28 +103,30 @@ main {
 
 .card ul li {
     margin-bottom: 0.5rem;
-    font-family: var(--font-secondary); /* Open Sans para elementos de lista */
+    font-family: var(--font-secondary);
 }
 
 .card ul li a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 600; /* Open Sans semi-negrita para enlaces */
+    font-weight: 600;
 }
 
 .card ul li a:hover {
     text-decoration: underline;
 }
 
+/* Footer styles */
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    padding: 1.5rem; /* Increased padding */
+    margin-top: auto; /* Push footer to the bottom */
 }
-
-footer p {
-    margin: 0.5rem 0;
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) { 
+    .card-container {
+        grid-template-columns: 2fr 1fr; /* Learning Activities es el doble de grande */
+    }
 }
-
