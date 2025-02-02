@@ -5,12 +5,12 @@
     --background-color: #ecf0f1;
     --text-color: #333;
     --accent-color: #e74c3c;
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
+    --font-primary: 'Montserrat', sans-serif; /* Fuente principal */
+    --font-secondary: 'Open Sans', sans-serif; /* Fuente secundaria */
 }
 
 body {
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary); /* Usar Open Sans como fuente predeterminada */
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
@@ -18,11 +18,18 @@ body {
     line-height: 1.6;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary); /* Usar Montserrat para encabezados */
+    font-weight: 700; /* Montserrat en negrita para encabezados */
+    color: var(--primary-color);
+}
+
 header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     text-align: center;
+    font-family: var(--font-primary); /* Montserrat para el encabezado */
 }
 
 header img {
@@ -42,6 +49,7 @@ nav ul {
     gap: 0.5rem;
     background-color: var(--primary-color);
     padding: 1rem;
+    font-family: var(--font-primary); /* Montserrat para la navegación */
 }
 
 nav a {
@@ -51,9 +59,9 @@ nav a {
     display: block;
     text-align: center;
     transition: background-color 0.3s;
+    font-weight: 600; /* Open Sans semi-negrita para enlaces */
 }
 
-nav a.active,
 nav a:hover {
     background-color: var(--secondary-color);
     border-radius: 4px;
@@ -76,6 +84,7 @@ main {
 .card h2 {
     color: var(--primary-color);
     margin-top: 0;
+    font-family: var(--font-primary); /* Montserrat para títulos de tarjetas */
 }
 
 .card ul {
@@ -85,11 +94,13 @@ main {
 
 .card ul li {
     margin-bottom: 0.5rem;
+    font-family: var(--font-secondary); /* Open Sans para elementos de lista */
 }
 
 .card ul li a {
     color: var(--secondary-color);
     text-decoration: none;
+    font-weight: 600; /* Open Sans semi-negrita para enlaces */
 }
 
 .card ul li a:hover {
@@ -102,6 +113,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    font-family: var(--font-secondary); /* Open Sans para el pie de página */
 }
 
 footer p {
