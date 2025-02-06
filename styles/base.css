@@ -115,6 +115,19 @@ main {
     text-decoration: underline;
 }
 
+/* Sublist styles */
+.submenu {
+    margin-left: 20px; /* Adds indentation for the sublist */
+    list-style-type: circle; /* Changes the bullet style */
+    font-size: 0.5rem; /* Decreased font size slightly */
+    font-weight: 500; /* Matches main list style */
+    color: var(--text-color); /* Ensures consistent text color */
+}
+
+.submenu li {
+    margin-top: 5px; /* Adds a small margin between sublist items */
+}
+
 /* Footer styles */
 footer {
     background-color: var(--primary-color);
