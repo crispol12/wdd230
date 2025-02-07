@@ -68,10 +68,7 @@ nav a:hover {
     background-color: var(--secondary-color);
     border-radius: 4px;
 }
-.navigation .active {
-    background-color: #000;
-    color: white;
-}
+
 
 /* Main content container */
 main {
