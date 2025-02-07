@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 - Web Interface Development | Course Assignment Portal | Christian Castillo">
-    <meta name="author" content="Christian Castillo">
-    <title>Christian Castillo - WDD 230 - Web Interface Development</title>
-    <meta property="og:title" content="Home Page WDD 230 - Web Interface Development">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crispol12.github.io/wdd230/">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f9/Otavalo_Imbabura_nina_urkuwan.jpg">
-    <meta property="og:image:alt" content="Paisaje de Otavalo, Imbabura, Ecuador">
-    <meta property="og:description" content="Welcome to my WDD 230 Web Interface Development page. Here you'll find my web development projects and coursework.">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css"> <!-- File for larger screens -->
-    <link rel="icon" href="favicon_ota.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 230 - Web Interface Development | Course Assignment Portal | Christian Castillo">
+  <meta name="author" content="Christian Castillo">
+  <title>Christian Castillo - WDD 230 - Web Interface Development</title>
+  <meta property="og:title" content="Home Page WDD 230 - Web Interface Development">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crispol12.github.io/wdd230/">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f9/Otavalo_Imbabura_nina_urkuwan.jpg">
+  <meta property="og:image:alt" content="Paisaje de Otavalo, Imbabura, Ecuador">
+  <meta property="og:description" content="Welcome to my WDD 230 Web Interface Development page. Here you'll find my web development projects and coursework.">
+  
+  <!-- Custom Normalize CSS (listed first) -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  
+  <!-- Your existing CSS files -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css"> <!-- File for larger screens -->
+  
+  <!-- New CSS for toggles (hamburger and dark mode) -->
+  <link rel="stylesheet" href="styles/darkmode.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="favicon_ota.ico">
 </head>
 <body>
-    <header>
-        <img src="images/me.webp" alt="Profile picture">
-        <span>Christian Castillo</span>
-    </header>
+  <header>
+    <img src="images/me.webp" alt="Profile picture">
+    <span>Christian Castillo</span>
+    <!-- Dark mode toggle button added in the header -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">⚙️ Dark Mode</button>
+  </header>
+  
+  <nav>
+    <!-- Hamburger menu button added in the nav -->
+    <button id="hamburgerButton" class="hamburger" aria-label="Toggle Navigation Menu">≡</button>
+    <ul id="navMenu">
+      <li><a href="https://crispol12.github.io/wdd230/">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="https://crispol12.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a></li>
+      <li><a href="#">Form</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>WDD 230: Web Interface Development</h1> <!-- Title outside the grid -->
     
-    <nav>
+    <div class="card-container"> <!-- Container for the cards -->
+      <section class="card">
+        <h2>Learning Activities</h2>
         <ul>
-            <li><a href="https://crispol12.github.io/wdd230/">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="https://crispol12.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a></li>
-            <li><a href="#">Form</a></li>
+          <li><a href="#">Week 01: Responsive Design</a></li>
+          <li>
+            <a href="#">Week 02: Web Components</a>
+            <ul class="submenu">
+              <li><a href="https://crispol12.github.io/wdd230/week02/design.html">Design Principles</a></li>
+              <li><a href="https://codepen.io/crispol12/pen/jENgEpK">Responsive "Hamburger" Menu</a></li>
+              <li><a href="https://crispol12.github.io/wdd230/week02/boom.html">JavaScript: DOM Manipulation</a></li>
+              <li><a href="https://codepen.io/crispol12/pen/jENgEpK">Responsive "Hamburger" Menu</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Week 03: Performance Optimization</a></li>
+          <li><a href=" ">Week 04: Web Accessibility</a></li>
         </ul>
-    </nav>
+      </section>
 
-    <main>
-        <h1>WDD 230: Web Interface Development</h1> <!-- Title outside the grid -->
-        
-        <div class="card-container"> <!-- Container for the cards -->
-            <section class="card">
-                <h2>Learning Activities</h2>
-                <ul>
-                    <li><a href="#">Week 01: Responsive Design</a></li>
-                    <li>
-                        <a href="#">Week 02: Web Components</a>
-                        <ul class="submenu">
-                            <li><a href="https://crispol12.github.io/wdd230/week02/design.html">Design Principles</a></li>
-                            <li><a href="https://codepen.io/crispol12/pen/jENgEpK">Responsive "Hamburger" Menu</a></li>
-                            <li><a href="https://crispol12.github.io/wdd230/week02/boom.html">JavaScript: DOM Manipulation</a></li>
-                            <li><a href="https://codepen.io/crispol12/pen/jENgEpK">Responsive "Hamburger" Menu</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Week 03: Performance Optimization</a></li>
-                    <li><a href=" ">Week 04: Web Accessibility</a></li>
-                </ul>
-            </section>
-
-            <section class="card">
-                <h2>Information</h2>
-                <div class="info-content">
-                    <p>🌤️ 72°F - Sunny</p>
-                    <p>👥 Visits: 128</p>
-                </div>
-            </section>
+      <section class="card">
+        <h2>Information</h2>
+        <div class="info-content">
+          <p>🌤️ 72°F - Sunny</p>
+          <p>👥 Visits: 128</p>
         </div>
-    </main>
+      </section>
+    </div>
+  </main>
 
-    <footer>
-        <p>
-            &copy; <span id="currentYear"></span> |Christian Castillo | Ecuador/Otavalo
-        </p>
-        <p id="lastModified"></p>
-    </footer>
+  <footer>
+    <p>
+      &copy; <span id="currentYear"></span> |Christian Castillo | Ecuador/Otavalo
+    </p>
+    <p id="lastModified"></p>
+  </footer>
 
-    <script src="scripts/getDates.js"></script>
+  <!-- Existing script for dates -->
+  <script src="scripts/getDates.js"></script>
+  <!-- New script for hamburger menu and dark mode toggle -->
+  <script src="scripts/darkMode.js"></script>
 </body>
 </html>

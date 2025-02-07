@@ -1,0 +1,56 @@
+/* Hamburger Menu Styles */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+  
+  /* On larger screens, hide the hamburger button */
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  }
+  
+  /* For mobile view, hide the nav menu by default and show when active */
+  @media screen and (max-width: 767px) {
+    #navMenu {
+      display: none;
+      flex-direction: column;
+    }
+    #navMenu.active {
+      display: flex;
+    }
+  }
+  
+  /* Dark Mode Styles for <main> and its cards */
+  main.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  main.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  main.dark-mode a {
+    color: #90caf9;
+  }
+  
+  /* Style for the dark mode toggle button */
+  .dark-mode-toggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 4px;
+  }
+  
