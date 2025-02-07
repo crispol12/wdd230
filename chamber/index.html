@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 230 - Web Interface Development | Course Assignment Portal | Christian Castillo">
+  <meta name="author" content="Christian Castillo">
+  <title>Home Page Otavalo's Chamber of Commerce</title>
+  <meta property="og:title" content="Home Page Otavalo's Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crispol12.github.io/wdd230/chamber/index.html">
+  <meta property="og:image" content="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/otavalo-market.webp">
+  <meta property="og:image:alt" content="Plaza de los Ponchos, Otavalo, Imbabura, Ecuador">
+  <meta property="og:description" content="Otavalo's Chamber of Commerce is a private institution that helps businesses become visible to the world. Welcome to the gateway to the world that will take your business to another level of growth.">
+  
+  <!-- Enlaza el reset/normalize CSS -->
+  <link rel="stylesheet" href="styles_chamber/normalize.css">
+
+  <!-- Enlaza el CSS base -->
+  <link rel="stylesheet" href="styles_chamber/base.css">
+  <!-- Enlaza el CSS para pantallas grandes -->
+  <link rel="stylesheet" href="styles_chamber/larger.css">
+  <link rel="icon" href="favicon_ota.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Otavalo Chamber of Commerce Logo">
+        </div>
+        <h1>Otavalo's Chambers of Commerce</h1>
+        <nav>
+            <!-- Botón para el menú responsive -->
+            <button class="hamburger" id="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="#directory">Directory</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Otavalo Chamber of Commerce</h2>
+            <p>Explanation of the Otavalo Chamber of Commerce and a proverb.</p>
+            <img src="images/hero.jpg" alt="Otavalo City">
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/service1.jpg" alt="Service 1">
+                    <p>Description Service</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/service2.jpg" alt="Service 2">
+                    <p>Description Service</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/service3.jpg" alt="Service 3">
+                    <p>Description Service</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/service4.jpg" alt="Service 4">
+                    <p>Description Service</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="biography">
+            <h2>Biography of Otavalo Chambers</h2>
+            <p>A detailed biography about the chamber and its history.</p>
+        </section>
+
+        <section class="image-section">
+            <h2>Explore Otavalo City</h2>
+            <img src="images/otavalo-city.jpg" alt="Otavalo City">
+        </section>
+
+        <section class="cta">
+            <p>Join us on this path of community and enriching experience in the best community.</p>
+            <a href="#join" class="cta-button">Join Now</a>
+        </section>
+
+        <section class="about">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>Learn more about the Otavalo Chamber of Commerce.</p>
+            </div>
+            <div class="social-networks">
+                <h2>Follow Us</h2>
+                <p>Social Media links here.</p>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>Address, Phone, Hours, and Map.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Otavalo Chamber of Commerce. All rights reserved.</p>
+        <p>Designed by Your Name | WDD 230 Project | <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- Enlaza el archivo JavaScript -->
+    <script src="scripts_chamber/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Styles for medium screens (min-width: 768px) */
+@media (min-width: 768px) {
+  header {
+      padding: 1.2rem 2.5rem;
+  }
+
+  /* Ensure smooth transition of nav between medium and large screens */
+  nav ul.menu {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center; /* Keep menu centered */
+      align-items: center;
+      width: auto;
+      background: none;
+      position: static;
+      padding: 0;
+      gap: 4rem; /* Medium screen spacing */
+  }
+  
+  nav ul.menu li a {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.4rem 0.6rem;
+  }
+}
+
+/* Styles for larger screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  /* Increase header padding */
+  header {
+      padding: 1.5rem 3rem;
+  }
+
+  /* Navigation - Larger Screens */
+  nav ul.menu {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center; /* Keep menu centered */
+      align-items: center;
+      width: auto;
+      background: none;
+      position: static;
+      padding: 0;
+      gap: 7rem; /* Maintain the requested space */
+  }
+
+  nav ul.menu li a {
+      font-size: 1.1rem; /* Keep readable */
+      font-weight: bold;
+      padding: 0.3rem 0.5rem;
+  }
+
+  /* Adjust main content padding */
+  main {
+      padding: 3rem 5%;
+  }
+
+  /* Enhance hero section padding */
+  .hero {
+      padding: 3rem 0;
+  }
+
+  /* Expand services grid to display more columns */
+  .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Display About section items in a row */
+  .about {
+      flex-direction: row;
+      gap: 2rem;
+  }
+
+  /* Footer styles for larger screens */
+  footer {
+      padding: 1.5rem;
+      font-size: 1rem;
+  }
+}
