@@ -1,56 +1,76 @@
-/* Hamburger Menu Styles */
+/* Position the navigation container relatively so that child elements can be absolutely positioned */
+nav {
+  position: relative;
+}
+
+/* Hamburger Menu Styles - positioned to the right */
 .hamburger {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0.5rem;
+  display: block;
+  position: absolute;
+  right: 1rem;           /* Positioned 1rem from the right edge */
+  top: 50%;              /* Vertically centered */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Hide hamburger button on larger screens */
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
   }
-  
-  /* On larger screens, hide the hamburger button */
-  @media screen and (min-width: 768px) {
-    .hamburger {
-      display: none;
-    }
+}
+
+/* Mobile view: hide nav menu by default and display it when the 'active' class is added */
+@media screen and (max-width: 767px) {
+  #navMenu {
+    display: none;
+    flex-direction: column;
   }
-  
-  /* For mobile view, hide the nav menu by default and show when active */
-  @media screen and (max-width: 767px) {
-    #navMenu {
-      display: none;
-      flex-direction: column;
-    }
-    #navMenu.active {
-      display: flex;
-    }
+  #navMenu.active {
+    display: flex;
   }
-  
-  /* Dark Mode Styles for <main> and its cards */
-  main.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  main.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-  }
-  
-  main.dark-mode a {
-    color: #90caf9;
-  }
-  
-  /* Style for the dark mode toggle button */
-  .dark-mode-toggle {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-left: 1rem;
-    border-radius: 4px;
-  }
-  
+}
+
+/* Dark Mode Styles applied to <body> to darken the entire background */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Optionally, if you want <main> to be transparent so it inherits the body background */
+body.dark-mode main {
+  background-color: transparent;
+}
+
+/* Card styles in dark mode */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Ensure that H2 titles are visible in dark mode */
+body.dark-mode .card h2 {
+  color: #e0e0e0;
+}
+
+/* Link styles in dark mode */
+body.dark-mode a {
+  color: #90caf9;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 4px;
+}
