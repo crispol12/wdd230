@@ -348,7 +348,6 @@ main {
 
 /* Shared styles for all three sections */
 .about-us,
-.social-networks,
 .contact {
     padding: 1.5rem;
     border-radius: 8px; /* Rounded corners */
@@ -358,24 +357,55 @@ main {
 }
 
 .about-us:hover,
-.social-networks:hover,
 .contact:hover {
     background-color: rgba(0, 0, 0, 0.05); /* Subtle background on hover */
     transform: translateY(-3px); /* Slight lift */
 }
 
 .about-us h2,
-.social-networks h2,
 .contact h2 {
     color: var(--primary-color); /* Dark blue for titles */
     margin-bottom: 1rem;
 }
 
 .about-us p,
-.social-networks p,
 .contact p {
     color: var(--text-color); /* Dark text */
     line-height: 1.5;
+}
+/* Social Networks Section */
+.social-networks {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* 🔹 Espaciado entre íconos */
+    margin-top: 1rem;
+}
+
+/* Individual Social Media Icons */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color); /* 🔹 Fondo del ícono */
+    color: white;
+    border-radius: 50%; /* 🔹 Íconos redondos */
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+    background-color: var(--secondary-color); /* 🔹 Cambia de color en hover */
+    transform: scale(1.1); /* 🔹 Efecto de zoom */
 }
 /* Discover Page Layout */
 .discover-layout {
