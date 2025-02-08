@@ -135,11 +135,61 @@
         line-height: 1.5; /* Improve text readability */
         color: var(--text-color);
     }
-  
-    /* Footer styles for larger screens */
-    footer {
+    .discover-layout {
+        grid-template-columns: 1fr 2fr; /* Sidebar takes 1/3, gallery takes 2/3 */
+    }
+    .sidebar-container {
+        background-color: #ffffff;
         padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--primary-color); 
+        max-width: 400px;
+        margin: 0 auto; 
+    }
+  
+    .sidebar {
+        align-items: start; /* Align content to the top */
+        gap: 2rem; /* Space between info-box and calendar */
+    }
+  
+     .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 🔹 Dos columnas en pantallas grandes */
+        gap: 1.5rem;
+    }
+
+    .gallery-item {
+        max-width: 400px; /* 🔹 Ajusta el tamaño máximo de los cuadros */
+    }
+  
+    .calendar {
+        max-width: 1000px; /* 🔹 Limita el tamaño del calendario en pantallas grandes */
+        margin: 0 auto; /* 🔹 Lo centra en la barra lateral */
+        padding: 1rem;
+    }
+
+    .calendar-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem; /* 🔹 Reduce el tamaño del texto */
+    }
+
+    #calendar-container {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        font-size: 0.8rem; /* 🔹 Reduce el tamaño de los números */
+        padding: 5px;
+    }
+
+    #calendar-container div {
+        padding: 8px;
+        font-size: 0.8rem; /* 🔹 Hace los días más compactos */
+    }
+
+    .today {
         font-size: 1rem;
+        padding: 10px;
     }
   }
   

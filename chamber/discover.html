@@ -45,43 +45,72 @@
 
   <main class="discover-layout">
       <!-- Sidebar Section -->
-      <aside class="sidebar">
-          <h2>About the Region</h2>
-          <p id="visit-message">Loading visit message...</p>
-          <ul>
-              <li><strong>Population:</strong> 39,354</li>
-              <li><strong>Main Industry:</strong> Textiles and Crafts</li>
-              <li><strong>Climate:</strong> Mild and Sunny</li>
-              <li><strong>Popular Attraction:</strong> Plaza de los Ponchos</li>
-          </ul>
-      </aside>
+      <aside class="sidebar-container">
+        <div class="sidebar">
+            <!-- 🔹 Información de Población -->
+            <div class="info-box">
+                <h2>Population Information</h2>
+                <p>Otavalo has a population of approximately 90,000 residents.</p>
+            </div>
+            
+            <!-- 🔹 Información Adicional sobre la Región -->
+            <div class="info-box">
+                <h2>About the Region</h2>
+                <p id="visit-message">Loading visit message...</p>
+                <ul>
+                    <li><strong>Main Industry:</strong> Textiles and Crafts</li>
+                    <li><strong>Climate:</strong> Mild and Sunny</li>
+                    <li><strong>Popular Attraction:</strong> Plaza de los Ponchos</li>
+                </ul>
+            </div>
+    
+            <!-- 🔹 Nueva Sección (Ejemplo: Destacado Local) -->
+            <div class="featured-box">
+                <h2>Featured Place</h2>
+                <img src="images/featured-place.webp" alt="Featured Place">
+                <p>Discover the most beautiful landscapes and cultural sites in Otavalo.</p>
+            </div>
+    
+            <!-- 🔹 Calendario -->
+            <div class="calendar">
+                <h2>Calendar</h2>
+                <div class="calendar-controls">
+                    <button id="prev-month">◀ Prev</button>
+                    <h3 id="calendar-month">Loading...</h3>
+                    <button id="next-month">Next ▶</button>
+                </div>
+                <div id="calendar-container"></div>
+            </div>
+        </div>
+    </aside>
+    
 
       <!-- Main Content Section -->
       <section class="gallery">
           <h2>Local Attractions</h2>
           <div class="gallery-grid">
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction1.webp" alt="Attraction 1">
+                  <img class="lazy" data-src="images/plaza_de_ponchos.webp" alt="Attraction 1">
                   <p>Plaza de los Ponchos</p>
               </div>
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction2.webp" alt="Attraction 2">
+                  <img class="lazy" data-src="images/volcan_imbabura.webp" alt="Attraction 2">
                   <p>Imbabura Volcano</p>
               </div>
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction3.webp" alt="Attraction 3">
+                  <img class="lazy" data-src="images/cuicocha_lagoon.webp" alt="Attraction 3">
                   <p>Cuicocha Lagoon</p>
               </div>
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction4.webp" alt="Attraction 4">
+                  <img class="lazy" data-src="images/handicrafts.webp" alt="Attraction 4">
                   <p>Local Handicrafts Market</p>
               </div>
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction5.webp" alt="Attraction 5">
-                  <p>Historic Otavalo Church</p>
+                  <img class="lazy" data-src="images/cascada_peguche.webp" alt="Attraction 5">
+                  <p>Otavalo People</p>
               </div>
               <div class="gallery-item">
-                  <img class="lazy" data-src="images/attraction6.webp" alt="Attraction 6">
+                  <img class="lazy" data-src="images/otavalo_people.webp" alt="Attraction 6">
                   <p>Natural Reserves</p>
               </div>
           </div>
@@ -93,7 +122,7 @@
       <p>Designed by Your Name | WDD 230 Project | <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts_chamber/discover.js"></script>
+  <script src="scripts_chamber/main.js"></script>
 </body>
 </html>
 </html>
