@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://crispol12.github.io/wdd230/chamber/index.html">
   <meta property="og:image" content="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/otavalo-market.webp">
   <meta property="og:image:alt" content="Plaza de los Ponchos, Otavalo, Imbabura, Ecuador">
-  <meta property="og:description" content="Otavalo's Chamber of Commerce is a private institution that helps businesses become visible to the world. Welcome to the gateway to the world that will take your business to another level of growth.">
+  <meta property="og:description" content="Otavalo Chamber of Commerce is a private institution that helps businesses become visible to the world. Welcome to the gateway to the world that will take your business to another level of growth.">
   
   <!-- Enlaza el reset/normalize CSS -->
   <link rel="stylesheet" href="styles_chamber/normalize.css">
@@ -23,119 +23,77 @@
   <link rel="icon" href="favicon_ota.ico">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo_otavalo.webp" alt="Otavalo Chamber of Commerce Logo">
-        </div>
-        <h1>Otavalo Chamber of Commerce</h1>
-        <nav>
-            <!-- Botón para el menú responsive -->
-            <button class="hamburger" id="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <ul class="menu" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#discover">Discover</a></li>
-                <li><a href="#directory">Directory</a></li>
-                <li><a href="#join">Join</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+      <div class="logo">
+          <img src="images/logo_otavalo.webp" alt="Otavalo Chamber of Commerce Logo">
+      </div>
+      <h1>Otavalo Chamber of Commerce</h1>
+      <nav>
+          <button class="hamburger" id="hamburger-menu">
+              <div></div>
+              <div></div>
+              <div></div>
+          </button>
+          <ul class="menu" id="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="discover.html">Discover</a></li>
+              <li><a href="directory.html">Directory</a></li>
+              <li><a href="join.html">Join</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <h2>Welcome to the Otavalo Chamber of Commerce</h2>
-            <p>Explanation of the Otavalo Chamber of Commerce and a proverb.</p>
-            <img src="images/otavalo_commerce.webp" alt="Otavalo City">
-        </section>
+  <main class="discover-layout">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+          <h2>About the Region</h2>
+          <p id="visit-message">Loading visit message...</p>
+          <ul>
+              <li><strong>Population:</strong> 39,354</li>
+              <li><strong>Main Industry:</strong> Textiles and Crafts</li>
+              <li><strong>Climate:</strong> Mild and Sunny</li>
+              <li><strong>Popular Attraction:</strong> Plaza de los Ponchos</li>
+          </ul>
+      </aside>
 
-        <section class="current-news">
-            <h2>Current News</h2>
-            <div class="news-grid">
-              <div class="news-item">
-                <img src="images/notice1.webp" alt="News 1">
-                <p>Details about the first news item.</p>
+      <!-- Main Content Section -->
+      <section class="gallery">
+          <h2>Local Attractions</h2>
+          <div class="gallery-grid">
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction1.webp" alt="Attraction 1">
+                  <p>Plaza de los Ponchos</p>
               </div>
-              <div class="news-item">
-                <img src="images/notice2.webp" alt="News 2">
-                <p>Details about the second news item.</p>
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction2.webp" alt="Attraction 2">
+                  <p>Imbabura Volcano</p>
               </div>
-              <div class="news-item">
-                <img src="images/notice3.webp" alt="News 3">
-                <p>Details about the third news item.</p>
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction3.webp" alt="Attraction 3">
+                  <p>Cuicocha Lagoon</p>
               </div>
-              <div class="news-item">
-                <img src="images/notice4.webp" alt="News 4">
-                <p>Details about the fourth news item.</p>
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction4.webp" alt="Attraction 4">
+                  <p>Local Handicrafts Market</p>
               </div>
-            </div>
-        </section>
-        <section class="biography-weather">
-            <div class="biography">
-              <h2>Biography</h2>
-              <p>
-                The Information Portal was founded with the mission of delivering up-to-date news, weather updates, and insights to users around the world. Our commitment to quality and accessibility drives everything we do.
-              </p>
-            </div>
-            <div class="weather-card">
-              <h2>Weather Information</h2>
-              <div class="info-content">
-                <p>🌤️ 72°F - Sunny</p>
-                <p>👥 Visits: 128</p>
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction5.webp" alt="Attraction 5">
+                  <p>Historic Otavalo Church</p>
               </div>
-            </div>
-          </section>
-          <section class="featured-businesses">
-            <h2>Featured Businesses</h2>
-            <div class="businesses-grid">
-              <div class="business-card">
-                <h3>Business 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore our products and services.</p>
+              <div class="gallery-item">
+                  <img class="lazy" data-src="images/attraction6.webp" alt="Attraction 6">
+                  <p>Natural Reserves</p>
               </div>
-              <div class="business-card">
-                <h3>Business 2</h3>
-                <p>High-quality services and innovative solutions tailored to meet your needs.</p>
-              </div>
-              <div class="business-card">
-                <h3>Business 3</h3>
-                <p>Your trusted partner in providing exceptional value and customer satisfaction.</p>
-              </div>
-            </div>
-          </section>
-        <section class="cta">
-            <p>Join us on this path of community and enriching experience in the best community.</p>
-            <a href="#join" class="cta-button">Join Now</a>
-        </section>
+          </div>
+      </section>
+  </main>
 
-        <section class="about">
-            <div class="about-us">
-              <h2>About Us</h2>
-              <p>Learn more about the Otavalo Chamber of Commerce and its mission to promote local businesses.</p>
-            </div>
-            <div class="about-grid">
-              <div class="social-networks">
-                <h2>Follow Us</h2>
-                <p>Links to our social media accounts: Facebook, Twitter, Instagram.</p>
-              </div>
-              <div class="contact">
-                <h2>Contact Us</h2>
-                <p>Address: Main Street, Otavalo, Ecuador</p>
-                <p>Phone: +593 123 456 789</p>
-                <p>Hours: Mon-Fri 9:00 AM - 5:00 PM</p>
-              </div>
-            </div>
-          </section>
-          
-    </main>
+  <footer>
+      <p>&copy; <span id="currentYear"></span> Otavalo Chamber of Commerce. All rights reserved.</p>
+      <p>Designed by Your Name | WDD 230 Project | <span id="lastModified"></span></p>
+  </footer>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Otavalo Chamber of Commerce. All rights reserved.</p>
-        <p>Designed by Your Name | WDD 230 Project | <span id="lastModified"></span></p>
-    </footer>
-
-    <!-- Enlaza el archivo JavaScript -->
-    <script src="scripts_chamber/main.js"></script>
+  <script src="scripts_chamber/discover.js"></script>
 </body>
+</html>
 </html>
