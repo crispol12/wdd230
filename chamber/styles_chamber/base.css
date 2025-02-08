@@ -176,7 +176,7 @@ main {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .hero img {
@@ -184,27 +184,137 @@ main {
     height: auto;
 }
 
-/* Services Section */
-.services {
-    margin: 2rem 0;
+/* Current News Section */
+.current-news {
+    margin: 2rem 0; /* Spacing around the section */
 }
 
-.services-grid {
+.news-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr; /* Single-column layout by default */
+    gap: 1rem; /* Space between news items */
 }
 
-.service-item {
-    background-color: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
+.news-item {
+    background-color: #fff; /* White background for contrast */
+    padding: 1rem; /* Inner padding */
+    border: 1px solid #ddd; /* Light border */
+    text-align: center; /* Center-align content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.news-item img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+.news-item p {
+    color: #111; /* Dark text for readability */
+    line-height: 1.5; /* Improve text legibility */
+}
+/* Biography and Weather Section */
+.biography-weather {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically by default */
+    gap: 1.5rem; /* Space between sections */
+    margin: 2rem 0; /* Space around the section */
+}
+
+.biography,
+.weather-card {
+    background-color: #f5f7f8; /* Light background */
+    padding: 1.5rem; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ddd; /* Light border */
+}
+
+.biography h2,
+.weather-card h2 {
+    color: var(--primary-color); /* Dark blue for titles */
+    margin-bottom: 1rem; /* Space below titles */
+}
+
+.biography p {
+    line-height: 1.6; /* Improve readability */
+    color: var(--text-color);
+}
+
+.weather-card .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between weather info */
+    font-size: 1.1rem; /* Slightly larger font */
+    color: var(--text-color); /* Dark text */
     text-align: center;
 }
 
-.service-item img {
-    max-width: 100%;
-    height: auto;
+.weather-card .info-content p {
+    margin: 0; /* Remove default margins */
+}
+/* Featured Businesses Section */
+/* Featured Businesses Section */
+.featured-businesses {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f5f7f8;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-businesses h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+}
+
+.businesses-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 1.5rem;
+}
+
+.business-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    text-align: left;
+}
+
+.business-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+    background-color: var(--primary-color); /* Change background to orange */
+    color: #fff; /* Change text color to white for better contrast */
+}
+
+.business-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.business-card:hover h3 {
+    color: #fff; /* Change h3 text color to white on hover */
+}
+
+.business-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: color 0.3s ease; /* Smooth transition for paragraph text color */
+}
+
+.business-card:hover p {
+    color: #fff; /* Change paragraph text color to white on hover */
 }
 
 /* Call to Action Section */
@@ -225,17 +335,47 @@ main {
 }
 
 /* About Section */
+/* About Section */
 .about {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     margin: 2rem 0;
 }
 
-.about > div {
-    background-color: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 1.5rem; /* Space between items */
+}
+
+/* Shared styles for all three sections */
+.about-us,
+.social-networks,
+.contact {
+    padding: 1.5rem;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    background-color: transparent; /* No visible background by default */
+    text-align: center; /* Center-align content */
+}
+
+.about-us:hover,
+.social-networks:hover,
+.contact:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle background on hover */
+    transform: translateY(-3px); /* Slight lift */
+}
+
+.about-us h2,
+.social-networks h2,
+.contact h2 {
+    color: var(--primary-color); /* Dark blue for titles */
+    margin-bottom: 1rem;
+}
+
+.about-us p,
+.social-networks p,
+.contact p {
+    color: var(--text-color); /* Dark text */
+    line-height: 1.5;
 }
 
 /* Footer */

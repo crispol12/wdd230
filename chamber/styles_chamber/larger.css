@@ -1,79 +1,145 @@
 /* Styles for medium screens (min-width: 768px) */
 @media (min-width: 768px) {
-  header {
-      padding: 1.2rem 2.5rem;
-  }
-
-  /* Ensure smooth transition of nav between medium and large screens */
-  nav ul.menu {
-      display: flex !important;
-      flex-direction: row;
-      justify-content: center; /* Keep menu centered */
-      align-items: center;
-      width: auto;
-      background: none;
-      position: static;
-      padding: 0;
-      gap: 4rem; /* Medium screen spacing */
+    header {
+        padding: 1.2rem 2.5rem;
+    }
+  
+    /* Ensure smooth transition of nav between medium and large screens */
+    nav ul.menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center; /* Keep menu centered */
+        align-items: center;
+        width: auto;
+        background: none;
+        position: static;
+        padding: 0;
+        gap: 4rem; /* Medium screen spacing */
+    }
+    
+    nav ul.menu li a {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.4rem 0.6rem;
+    }
   }
   
-  nav ul.menu li a {
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 0.4rem 0.6rem;
+  /* Styles for larger screens (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    /* Increase header padding */
+    header {
+        padding: 1.5rem 3rem;
+    }
+  
+    /* Navigation - Larger Screens */
+    nav ul.menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center; /* Keep menu centered */
+        align-items: center;
+        width: auto;
+        background: none;
+        position: static;
+        padding: 0;
+        gap: 7rem; /* Maintain the requested space */
+    }
+  
+    nav ul.menu li a {
+        font-size: 1.1rem; /* Keep readable */
+        font-weight: bold;
+        padding: 0.3rem 0.5rem;
+    }
+  
+    /* Adjust main content padding */
+    main {
+        padding: 3rem 5%;
+    }
+  
+    /* Enhance hero section padding */
+    .hero {
+        padding: 3rem 0;
+    }
+  
+    /* Expand news grid to display more columns */
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+  
+    /* Biography and Weather Section */
+    .biography-weather {
+        display: flex;
+        flex-direction: row; /* Align sections side by side */
+        justify-content: space-between;
+        gap: 2rem; /* Space between the columns */
+    }
+    
+    .biography,
+    .weather-card {
+        flex: 1; /* Each section takes up equal space */
+        padding: 2rem; /* Increase padding for larger screens */
+    }
+    
+    .weather-card .info-content {
+        display: flex;
+        flex-direction: row; /* Align weather info horizontally */
+        justify-content: space-around; /* Distribute items evenly */
+        gap: 1.5rem; /* Add space between items */
+    }
+  
+    /* Featured Businesses - Ensure proper alignment */
+    .businesses-grid {
+        display: flex; /* Flexbox to ensure proper row alignment */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between; /* Evenly distribute items */
+        align-items: stretch; /* Ensure all items have equal height */
+        gap: 2rem;
+    }
+  
+    .business-card {
+        flex: 1; /* Ensure equal width */
+        max-width: 30%; /* Prevent excessive stretching */
+        padding: 2rem;
+        text-align: center;
+    }
+  
+    /* About Section - Ensure equal alignment */
+    .about-grid {
+        display: flex;
+        flex-direction: row; /* Ensure items are in a single row */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: flex-start; /* Align items at the top */
+        gap: 2rem; /* Add spacing between items */
+    }
+  
+    .about-us,
+    .social-networks,
+    .contact {
+        flex: 1; /* Ensure equal width for all items */
+        max-width: 30%; /* Prevent excessive stretching */
+        padding: 2rem;
+        text-align: center; /* Center text alignment */
+    }
+  
+    .about-us h2,
+    .social-networks h2,
+    .contact h2 {
+        margin-bottom: 1rem; /* Add spacing below titles */
+        color: var(--primary-color); /* Keep consistent heading color */
+    }
+  
+    .about-us p,
+    .social-networks p,
+    .contact p {
+        line-height: 1.5; /* Improve text readability */
+        color: var(--text-color);
+    }
+  
+    /* Footer styles for larger screens */
+    footer {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
   }
-}
-
-/* Styles for larger screens (min-width: 1024px) */
-@media (min-width: 1024px) {
-  /* Increase header padding */
-  header {
-      padding: 1.5rem 3rem;
-  }
-
-  /* Navigation - Larger Screens */
-  nav ul.menu {
-      display: flex !important;
-      flex-direction: row;
-      justify-content: center; /* Keep menu centered */
-      align-items: center;
-      width: auto;
-      background: none;
-      position: static;
-      padding: 0;
-      gap: 7rem; /* Maintain the requested space */
-  }
-
-  nav ul.menu li a {
-      font-size: 1.1rem; /* Keep readable */
-      font-weight: bold;
-      padding: 0.3rem 0.5rem;
-  }
-
-  /* Adjust main content padding */
-  main {
-      padding: 3rem 5%;
-  }
-
-  /* Enhance hero section padding */
-  .hero {
-      padding: 3rem 0;
-  }
-
-  /* Expand services grid to display more columns */
-  .services-grid {
-      grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Display About section items in a row */
-  .about {
-      flex-direction: row;
-      gap: 2rem;
-  }
-
-  /* Footer styles for larger screens */
-  footer {
-      padding: 1.5rem;
-      font-size: 1rem;
-  }
-}
+  
