@@ -421,6 +421,11 @@ main {
     grid-template-columns: 1fr; /* Una columna en móviles */
     gap: 1.5rem;
 }
+.info-box ul {
+    list-style: none; /* 🔹 Remove default bullets */
+    padding: 0; /* 🔹 Remove default padding */
+    margin: 0; /* 🔹 Remove default margin */
+}
 
 /* Shared Box Styles */
 .info-box,
@@ -432,6 +437,35 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.featured-box img {
+    width: 100%; /* 🔹 Hace que la imagen se ajuste al contenedor */
+    max-width: 350px; /* 🔹 Evita que la imagen sea demasiado grande */
+    height: auto; /* 🔹 Mantiene la proporción correcta */
+    border-radius: 8px; /* 🔹 Bordes redondeados */
+    object-fit: cover; /* 🔹 Asegura que la imagen no se deforme */
+    margin-bottom: 1rem; /* 🔹 Espacio entre la imagen y el texto */
+}
+/* Highlight the visit message */
+#visit-message {
+    background-color: var(--secondary-color); /* 🔹 Usa el color secundario para resaltar */
+    color: white; /* 🔹 Texto en blanco para contraste */
+    font-size: 1.1rem; /* 🔹 Tamaño de letra más grande */
+    font-weight: bold; /* 🔹 Hace el texto más fuerte */
+    text-align: center; /* 🔹 Centra el texto */
+    padding: 0.7rem; /* 🔹 Espaciado interno para mejor visibilidad */
+    border-radius: 8px; /* 🔹 Bordes redondeados */
+    margin-top: 1rem; /* 🔹 Espacio superior */
+    display: block; /* 🔹 Asegura que ocupe todo el ancho disponible */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 🔹 Agrega una ligera sombra */
+    transition: background 0.3s ease, transform 0.2s ease; /* 🔹 Efecto de transición */
+}
+
+/* Hover Effect */
+#visit-message:hover {
+    background-color: var(--primary-color); /* 🔹 Cambia a azul oscuro en hover */
+    transform: scale(1.05); /* 🔹 Hace que resalte ligeramente */
+}
+
 
 /* Titles for Sidebar Sections */
 .sidebar h2 {
