@@ -57,24 +57,24 @@ nav {
     z-index: 1001;
 }
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
+.hamburger span {
+    display: block;       /* Permite usar ancho, alto y margin */
+    width: 25px;          /* Ajusta el ancho según necesites */
+    height: 3px;          /* Ajusta la altura para simular la barra */
+    margin: 4px 0;        /* Espaciado entre barras */
+    background-color: #f9f9f9; /* Color de las barras */
+  }
+  
 /* Hamburger transformation to "X" when open */
-.hamburger.open div:nth-child(1) {
+.hamburger.open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
 
-.hamburger.open div:nth-child(2) {
+.hamburger.open span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.open div:nth-child(3) {
+.hamburger.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
