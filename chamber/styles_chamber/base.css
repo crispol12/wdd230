@@ -325,7 +325,7 @@ main {
 
 .businesses-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
 }
 
@@ -340,10 +340,10 @@ main {
 }
 
 .business-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow */
-    background-color: var(--primary-color); /* Change background to orange */
-    color: #fff; /* Change text color to white for better contrast */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    background-color: var(--primary-color); 
+    color: #fff; 
 }
 
 .business-card h3 {
@@ -371,40 +371,45 @@ main {
 /* Call to Action Section */
 .cta {
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: #fff;
     padding: 2rem;
     margin: 2rem 0;
 }
 
 .cta-button {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: #fff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
 }
+a.cta-button:hover {
+    background-color: var(--accent-color); 
+    color: #ffffff; 
+    text-decoration: underline; 
+}
 
 /* About Section */
-/* About Section */
+
 .about {
     margin: 2rem 0;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for small screens */
-    gap: 1.5rem; /* Space between items */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
 }
 
 /* Shared styles for all three sections */
 .about-us,
 .contact {
     padding: 1.5rem;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-    background-color: transparent; /* No visible background by default */
-    text-align: center; /* Center-align content */
+    border-radius: 8px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    background-color: transparent; 
+    text-align: center; 
 }
 
 .about-us:hover,
@@ -434,7 +439,7 @@ main {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* 🔹 Espaciado entre íconos */
+    gap: 1rem; 
     margin-top: 1rem;
 }
 
@@ -445,9 +450,9 @@ main {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: var(--primary-color); /* 🔹 Fondo del ícono */
+    background-color: var(--primary-color); 
     color: white;
-    border-radius: 50%; /* 🔹 Íconos redondos */
+    border-radius: 50%; 
     font-size: 1.5rem;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -455,27 +460,27 @@ main {
 
 /* Hover Effect */
 .social-icons a:hover {
-    background-color: var(--secondary-color); /* 🔹 Cambia de color en hover */
-    transform: scale(1.1); /* 🔹 Efecto de zoom */
+    background-color: var(--secondary-color); 
+    transform: scale(1.1); 
 }
 /* Discover Page Layout */
 .discover-layout {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile screens */
-    gap: 2rem; /* Space between sidebar and gallery */
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
     padding: 2rem;
 }
 
 /* Sidebar Layout */
 .sidebar {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna en móviles */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
 }
 .info-box ul {
-    list-style: none; /* 🔹 Remove default bullets */
-    padding: 0; /* 🔹 Remove default padding */
-    margin: 0; /* 🔹 Remove default margin */
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
 }
 
 /* Shared Box Styles */
