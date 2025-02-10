@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       lazyImages.forEach(image => observer.observe(image));
   }
-
-  // 🔹 Visit Message with localStorage
   const visitMessage = document.getElementById("visit-message");
   if (visitMessage) {
       const lastVisit = localStorage.getItem("lastVisit");
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem("lastVisit", now);
   }
 
-  // 🔹 Generate Interactive Calendar
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
 
