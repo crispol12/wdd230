@@ -133,8 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Generate the initial calendar
       generateCalendar(currentMonth, currentYear);
-    } else {
-      console.warn('Prev/Next month buttons are not found.');
-    }
+    } 
   });
   
