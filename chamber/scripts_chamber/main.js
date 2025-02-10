@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 🔹 Toggle Hamburger Menu
     const hamburger = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');
   
@@ -10,19 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   
-    // 🔹 Set the current year in the footer
     const currentYearElement = document.getElementById('currentYear');
     if (currentYearElement) {
       currentYearElement.textContent = new Date().getFullYear();
     }
   
-    // 🔹 Set the last modified date in the footer
     const lastModifiedElement = document.getElementById('lastModified');
     if (lastModifiedElement) {
       lastModifiedElement.textContent = `Last Updated: ${document.lastModified}`;
     }
   
-    // 🔹 Lazy Loading Images
     const lazyImages = document.querySelectorAll('img.lazy');
     if (lazyImages.length > 0) {
       const observer = new IntersectionObserver((entries, observer) => {
@@ -60,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('lastVisit', now);
     }
   
-    // 🔹 Calendar Generation
+    // Calendar Generation
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
   
