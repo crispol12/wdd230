@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Hamburger Menu
   const hamburger = document.getElementById('hamburger-menu');
   const navMenu = document.getElementById('nav-menu');
 
@@ -9,16 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Current Year
   const currentYearElement = document.getElementById('currentYear');
   if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
   }
 
+  // Last Modified Date
   const lastModifiedElement = document.getElementById('lastModified');
   if (lastModifiedElement) {
     lastModifiedElement.textContent = `Last Updated: ${document.lastModified}`;
   }
 
+  // Lazy Loading Images
   const lazyImages = document.querySelectorAll('img.lazy');
   if (lazyImages.length > 0) {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -29,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
           if (dataSrc) {
             img.src = dataSrc;
             img.classList.remove('lazy');
-            img.removeAttribute('data-src'); // Evita carga doble
+            img.removeAttribute('data-src');
             observer.unobserve(img);
           }
         }
       });
-    }, { rootMargin: '50px 0px', threshold: 0.1 });
+    }, { rootMargin: '100px 0px', threshold: 0.1 });
 
     lazyImages.forEach(image => observer.observe(image));
   }
@@ -104,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
       dayElement.textContent = day;
       dayElement.classList.add('calendar-day');
 
-      // Highlight the current day
       if (day === today && month === thisMonth && year === thisYear) {
         dayElement.classList.add('today');
       }
