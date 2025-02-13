@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 230 - Web Interface Development | Course Assignment Portal | Christian Castillo">
+  <meta name="author" content="Christian Castillo">
+  <title>Christian Castillo - WDD 230 - Web Frontend Development</title>
+  <meta property="og:title" content="Home Page WDD 230 - Web Interface Development">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crispol12.github.io/wdd230/">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f9/Otavalo_Imbabura_nina_urkuwan.jpg">
+  <meta property="og:image:alt" content="Paisaje de Otavalo, Imbabura, Ecuador">
+  <meta property="og:description" content="Welcome to my WDD 230 Web Interface Development page. Here you'll find my web development projects and coursework.">
+  
+   <link rel="stylesheet" href="styles/normalize.css">
+   <link rel="stylesheet" href="styles/base.css">
+   <link rel="stylesheet" href="styles/larger.css"> 
+   <link rel="stylesheet" href="styles/darkmode.css">
+   <link rel="stylesheet" href="styles/form.css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="icon" href="favicon_ota.ico">
+</head>
+<body>
+  <header>
+    <img src="images/me.webp" alt="Profile picture">
+    <span>Christian Castillo</span>
+    <!-- Dark mode toggle button added in the header -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">⚙️ Dark Mode</button>
+  </header>
+  
+  <nav>
+    <!-- Hamburger menu button added in the nav -->
+    <button id="hamburgerButton" class="hamburger" aria-label="Toggle Navigation Menu">≡</button>
+    <ul id="navMenu">
+      <li><a href="https://crispol12.github.io/wdd230/">Home</a></li>
+      <li><a href="https://crispol12.github.io/wdd230/chamber/index.html">Chamber</a></li>
+      <li><a href="https://crispol12.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a></li>
+      <li class ="active"><a href="form.html">Form</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>User Registration</h2>
+
+    <!-- Form -->
+    <form id="registrationForm" action="registration.html" method="get">
+      <!-- Username -->
+      <div>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+        >
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          pattern="[A-Za-z0-9]{8,}"
+          title="The password must be at least 8 alphanumeric characters."
+        >
+      </div>
+
+      <!-- Confirm Password -->
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        >
+      </div>
+
+      <!-- Email (byui.edu domain) -->
+      <div>
+        <label for="email">Email (byui.edu):</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@byui\.edu"
+          title="Please enter a valid byui.edu email address."
+        >
+      </div>
+
+      <!-- Page Rating (range) -->
+      <div>
+        <label for="pageRating">Page Rating (1-10):</label>
+        <input
+          type="range"
+          id="pageRating"
+          name="pageRating"
+          min="1"
+          max="10"
+          step="1"
+          value="5"
+        >
+        <span id="rangeValue">5</span>
+      </div>
+
+      <!-- Submit button -->
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentYear"></span> |Christian Castillo | Ecuador/Otavalo
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/getDates.js"></script>
+  <script src="scripts/darkMode.js"></script>
+  <script src="scripts/formvalidation.js"></script>
+  
+</body>
+</html>

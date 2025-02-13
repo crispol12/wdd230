@@ -1,25 +1,26 @@
+/* Global CSS variables in :root */
 :root {
     --primary-color: #1a2634;    /* Darker blue for better contrast with white */
     --secondary-color: #0b6bb8;  /* Darker blue for better contrast with white */
-    --background-color: #f5f7f8; /* Slightly lighter background */
-    --text-color: #222222;      /* Darker text color for better contrast */
-    --accent-color: #c41e3a;    /* Darker red for better contrast */
+    --background-color: #f5f7f8; /* Light background for high contrast with dark text */
+    --text-color: #222222;       /* Dark text color for better readability */
+    --accent-color: #c41e3a;     /* Accent color for focus states */
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Open Sans', sans-serif;
 }
 
+/* Body styling using high-contrast background and text */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-secondary);
-    color: var(--text-color);    /* Now using darker text color */
+    color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
-
 
 /* Header styles */
 header {
@@ -64,11 +65,17 @@ nav a {
     font-weight: 600;
 }
 
+/* :hover state for navigation links provides clear interactive feedback */
 nav a:hover {
     background-color: var(--secondary-color);
     border-radius: 4px;
 }
 
+/* Active navigation link styling */
+#navMenu li.active a {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
 
 /* Main content container */
 main {
@@ -80,7 +87,7 @@ main {
     box-sizing: border-box;
 }
 
-/* Card container with Grid */
+/* Card container with Grid layout */
 .card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -96,7 +103,7 @@ main {
 }
 
 .card h2 {
-    color: #1a1a1a;             /* Darker text for headers */
+    color: #1a1a1a;  /* Darker text for headers */
     margin-top: 0;
     font-family: var(--font-primary);
 }
@@ -107,7 +114,7 @@ main {
 }
 
 .card ul li a {
-    color: #0a558c;            /* Darker blue for links that passes contrast check */
+    color: #0a558c;  /* Darker blue for links, ensuring sufficient contrast */
     text-decoration: none;
     font-weight: 600;
 }
@@ -118,16 +125,16 @@ main {
 
 /* Sublist styles */
 .submenu {
-    margin-left: 20px; /* Adds indentation for the sublist */
-    list-style-type: none; /* Removes default bullet */
+    margin-left: 20px; /* Indentation for the sublist */
+    list-style-type: none; /* Remove default bullet */
     font-size: 0.7rem; /* Slightly smaller font size */
-    font-weight: 500; /* Matches main list style */
-    color: var(--text-color); /* Ensures consistent text color */
+    font-weight: 500; /* Consistent with main list style */
+    color: var(--text-color); /* Consistent text color */
 }
 
 .submenu li {
-    margin-top: 5px; /* Adds a small margin between sublist items */
-    position: relative; /* Needed for the dash */
+    margin-top: 5px; /* Small margin between sublist items */
+    position: relative; /* For positioning the dash */
     padding-left: 15px; /* Space for the dash */
 }
 
@@ -135,8 +142,9 @@ main {
     content: "-"; /* Adds the dash */
     position: absolute;
     left: 0; /* Aligns dash to the left */
-    color: var(--text-color); /* Matches text color */
+    color: var(--text-color);
 }
+
 /* Footer styles */
 footer {
     background-color: var(--primary-color);
@@ -144,6 +152,51 @@ footer {
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
+}
+
+/* Button styling with maintained primary color and clear interactive states */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* :hover state for buttons */
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* :active state provides a slight scale-down effect for feedback */
+button:active {
+    transform: scale(0.98);
+}
+
+/* :focus state for buttons to ensure keyboard accessibility */
+button:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+/* Additional interactive elements: Input focus state for forms, if applicable */
+input,
+textarea,
+select {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 /* Media queries for larger screens */
@@ -154,7 +207,7 @@ footer {
         justify-content: center;
     }
 
-    /* Two-column layout for cards in larger screens */
+    /* Two-column layout for cards on larger screens */
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
