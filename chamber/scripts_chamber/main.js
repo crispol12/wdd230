@@ -137,6 +137,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       generateCalendar(currentMonth, currentYear);
     });
+    document.addEventListener("DOMContentLoaded", () => {
+      const timestampField = document.getElementById("timestamp");
+      const now = new Date();
+      timestampField.value = now.toISOString();
+    });
 
     // Generate the initial calendar
     generateCalendar(currentMonth, currentYear);

@@ -1,4 +1,9 @@
 /* Styles for medium screens (min-width: 768px) */
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 @media (min-width: 768px) {
     header {
         padding: 1.2rem 2.5rem;
@@ -21,6 +26,18 @@
         font-size: 1rem;
         font-weight: bold;
         padding: 0.4rem 0.6rem;
+    }
+    .join-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .join-form {
+        flex: 1;
+    }
+    .membership-benefits {
+        flex: 1;
+        border-left: 1px solid #ccc;
+        padding-left: 1rem;
     }
   }
   
