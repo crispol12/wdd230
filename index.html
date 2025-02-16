@@ -46,6 +46,18 @@
   </nav>
   
   <main>
+
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+        <source srcset="images/hero-large.webp" media="(max-width: 960px)">
+        <img src="images/hero-large.webp" alt="hero image">
+      </picture>
+      <div class="hero-label">
+        <p>Adelaide Temple Australia</p>
+      </div>
+    </div>
+
     <h1>WDD 230: Web Interface Development</h1> <!-- Title outside the grid -->
     
     <div class="card-container"> <!-- Container for the cards -->
@@ -80,7 +92,7 @@
           </li>
         </ul>
       </section>
-
+      
       <section class="card">
         <h2>Information</h2>
         <div class="info-content">
@@ -88,6 +100,17 @@
           <p>👥 Visits: 128</p>
         </div>
       </section>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://maps.app.goo.gl/4ey1LwcDBsbaa3YdA" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </main>
 
