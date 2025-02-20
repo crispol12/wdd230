@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const memberElement = document.createElement('div');
                 memberElement.className = 'member-card';
                 memberElement.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}" class="member-image">
+                    <img src="images/${member.image}" alt="${member.name}" class="member-image" loading="lazy">
                     <h2>${member.name}</h2>
                     <p><strong>Address:</strong> ${member.address}</p>
                     <p><strong>Phone:</strong> ${member.phone}</p>
