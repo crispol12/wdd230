@@ -1,0 +1,59 @@
+// Define the base URL for your GitHub Pages repository
+const baseURL = "https://crispol12.github.io/wdd230";
+
+// Define the URL for your JSON data file
+const linksURL = "https://crispol12.github.io/wdd230/data/links.json";
+
+// Asynchronous function to fetch the links data
+async function getLinks() {
+  try {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    // For testing purposes, you can log the data here:
+    // console.log(data);
+    // Call the function to display the links, sending the weeks array as an argument
+    displayLinks(data.weeks);
+  } catch (error) {
+    console.error("Error fetching links data:", error);
+  }
+}
+
+// Function to dynamically create and display the activity links
+function displayLinks(weeks) {
+  // Get the container element where the links will be inserted
+  const linksContainer = document.getElementById("links");
+  // Clear any existing content
+  linksContainer.innerHTML = "";
+
+  // Loop over each week in the array
+  weeks.forEach(weekObj => {
+    // Create and append a heading for the week
+    const weekHeading = document.createElement("h3");
+    weekHeading.textContent = weekObj.week;
+    linksContainer.appendChild(weekHeading);
+
+    // Create an unordered list to hold the links for this week
+    const ul = document.createElement("ul");
+
+    // Loop over each link in the week object's "links" array
+    weekObj.links.forEach(link => {
+      // Create a list item for the link
+      const li = document.createElement("li");
+      // Create the anchor element for the link
+      const a = document.createElement("a");
+      // Build the full URL by concatenating the base URL and the relative URL from JSON
+      a.href = baseURL + link.url;
+      // Set the link text to the title from JSON
+      a.textContent = link.title;
+      // Append the link to the list item, then add the list item to the list
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    // Append the list of links to the container
+    linksContainer.appendChild(ul);
+  });
+}
+
+// Call the getLinks function to start the process
+getLinks();
