@@ -25,5 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       darkModeToggle.textContent = '⚙️ Dark Mode';
     }
+
+  // Lazy Loading Images
+  const lazyImages = document.querySelectorAll('img.lazy');
+  if (lazyImages.length > 0) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const dataSrc = img.getAttribute('data-src');
+          if (dataSrc) {
+            img.src = dataSrc;
+            img.classList.remove('lazy');
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        }
+      });
+    }, { rootMargin: '100px 0px', threshold: 0.1 });
+
+    lazyImages.forEach(image => observer.observe(image));
+  }
+
   });
 });

@@ -244,6 +244,24 @@ select:focus {
 }
 
 /* Media queries for larger screens */
+@media screen and (min-width: 200px) and (max-width: 450px) {
+    .hero-label {
+      top: 20px;
+      left: 20px;
+      max-width: calc(100% - 40px);
+      box-sizing: border-box;
+    }
+    .hero-label p {
+        margin: 0;
+        padding: 0.25rem;
+        font-weight: 250; 
+        font-size: 0.8rem;
+        font-family: var(--font-secondary);
+        color: white;
+        white-space: nowrap;
+    
+    }
+}
 @media screen and (min-width: 768px) {
     /* Horizontal navigation for larger screens */
     nav ul {
@@ -259,4 +277,5 @@ select:focus {
     nav a {
         padding: 0.5rem 1rem;
     }
+
 }
