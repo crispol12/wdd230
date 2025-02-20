@@ -146,4 +146,51 @@ document.addEventListener('DOMContentLoaded', function () {
     // Generate the initial calendar
     generateCalendar(currentMonth, currentYear);
   }
+     // Members Directory Functionality
+  const membersContainer = document.getElementById('membersContainer');
+  const gridViewButton = document.getElementById('gridView');
+  const listViewButton = document.getElementById('listView');
+
+  async function fetchMembers() {
+    try {
+      const response = await fetch('data/members.json');
+      const data = await response.json();
+      displayMembers(data.members);
+    } catch (error) {
+      console.error('Error fetching member data:', error);
+      if (membersContainer) {
+        membersContainer.innerHTML = '<p>Error loading member data.</p>';
+      }
+    }
+  }
+
+  function displayMembers(members) {
+    if (!membersContainer) return;
+    membersContainer.innerHTML = '';
+    members.forEach(member => {
+      const memberDiv = document.createElement('div');
+      memberDiv.classList.add('member-card');
+      memberDiv.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name}" style="width:100px; height:100px;">
+        <div>
+          <h3>${member.name}</h3>
+          <p><strong>Address:</strong> ${member.address}</p>
+          <p><strong>Phone:</strong> ${member.phone}</p>
+          <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+          <p><strong>Membership Level:</strong> ${member.membership}</p>
+        </div>
+      `;
+      membersContainer.appendChild(memberDiv);
+    });
+  }
+
+  if (gridViewButton && listViewButton && membersContainer) {
+    gridViewButton.addEventListener('click', () => {
+      membersContainer.classList.remove('list-view');
+    });
+    listViewButton.addEventListener('click', () => {
+      membersContainer.classList.add('list-view');
+    });
+    fetchMembers();
+  }
 });

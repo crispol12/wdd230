@@ -18,7 +18,7 @@ async function getLinks() {
   }
 }
 
-// Function to dynamically create and display the activity links
+// Function to dynamically create and display the activity links with vertical bars between them
 function displayLinks(weeks) {
   // Get the container element where the links will be inserted
   const linksContainer = document.getElementById("links");
@@ -32,26 +32,28 @@ function displayLinks(weeks) {
     weekHeading.textContent = weekObj.week;
     linksContainer.appendChild(weekHeading);
 
-    // Create an unordered list to hold the links for this week
-    const ul = document.createElement("ul");
+    // Create a paragraph to hold the links for this week on one line
+    const linkLine = document.createElement("p");
 
     // Loop over each link in the week object's "links" array
-    weekObj.links.forEach(link => {
-      // Create a list item for the link
-      const li = document.createElement("li");
+    weekObj.links.forEach((link, index) => {
       // Create the anchor element for the link
       const a = document.createElement("a");
       // Build the full URL by concatenating the base URL and the relative URL from JSON
       a.href = baseURL + link.url;
       // Set the link text to the title from JSON
       a.textContent = link.title;
-      // Append the link to the list item, then add the list item to the list
-      li.appendChild(a);
-      ul.appendChild(li);
+      // Append the link to the paragraph
+      linkLine.appendChild(a);
+
+      // Append a vertical bar between links (except after the last link)
+      if (index < weekObj.links.length - 1) {
+        linkLine.appendChild(document.createTextNode(" | "));
+      }
     });
 
-    // Append the list of links to the container
-    linksContainer.appendChild(ul);
+    // Append the line of links to the container
+    linksContainer.appendChild(linkLine);
   });
 }
 
