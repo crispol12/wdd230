@@ -1,0 +1,76 @@
+{
+    "members": [
+        {
+            "name": "Cafe Rio Intag",
+            "address": "Av. Libertad 123, Intag, Ecuador",
+            "phone": "+593 2 1234567",
+            "website": "https://www.caferiointag.com",
+            "image": "riointag.webp",
+            "membership": "Gold",
+            "description": "Specialized in artisan coffees and light breakfast options."
+        },
+        {
+            "name": "Cafeteria La Cosecha",
+            "address": "Calle del Trigo 45, Quito, Ecuador",
+            "phone": "+593 2 7654321",
+            "website": "https://www.lacosecha.com",
+            "image": "lacosecha.webp",
+            "membership": "Silver",
+            "description": "Offering freshly baked pastries and gourmet coffee blends."
+        },
+        {
+            "name": "Restaurant Gambaru",
+            "address": "Av. Universitaria 789, Guayaquil, Ecuador",
+            "phone": "+593 4 9876543",
+            "website": "https://www.restaurantgambaru.com",
+            "image": "gambaru.webp",
+            "membership": "Platinum",
+            "description": "Fusion cuisine blending local flavors with international techniques."
+        },
+        {
+            "name": "Cafeteria Sirani",
+            "address": "Calle Bolivar 12, Cuenca, Ecuador",
+            "phone": "+593 7 1234568",
+            "website": "https://www.siraniot.com",
+            "image": "sirani.webp",
+            "membership": "Gold",
+            "description": "Authentic Italian-style pizza with a unique Ecuadorian twist."
+        },
+        {
+            "name": "La Taberna Bar and Grill",
+            "address": "Av. Independencia 234, Loja, Ecuador",
+            "phone": "+593 3 8765432",
+            "website": "https://www.lataberna.com",
+            "image": "taberna.webp",
+            "membership": "Bronze",
+            "description": "A vibrant bar and grill featuring craft beers and live music."
+        },
+        {
+            "name": "Cafeteria El Vazco",
+            "address": "Calle El Vazco 56, Manta, Ecuador",
+            "phone": "+593 5 2345678",
+            "website": "https://www.elvazco.com",
+            "image": "saborvazco.webp",
+            "membership": "Silver",
+            "description": "Traditional coffee house offering a cozy ambiance and local delicacies."
+        },
+        {
+            "name": "Cafeteria El Salinerito",
+            "address": "Av. Salinas 89, Salinas, Ecuador",
+            "phone": "+593 6 3456789",
+            "website": "https://www.elsalinerito.com",
+            "image": "salinerito.webp",
+            "membership": "Gold",
+            "description": "A popular spot for both locals and tourists looking for quality brews."
+        },
+        {
+            "name": "Onvia",
+            "address": "Calle Esquina 101, Ambato, Ecuador",
+            "phone": "+593 3 9876543",
+            "website": "https://www.laesquina.com",
+            "image": "onvia.webp",
+            "membership": "Platinum",
+            "description": "Design, Prints, Banner 3D"
+        }
+    ]
+}  
