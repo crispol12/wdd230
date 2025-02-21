@@ -793,11 +793,11 @@ form input[type="submit"] {
     padding: 1rem;
     margin-bottom: 1rem;
     position: relative;
-  }
-  #meet-banner p {
+}
+#meet-banner p {
     margin: 0;
-  }
-  #meet-banner button#close-banner {
+}
+#meet-banner button#close-banner {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
@@ -807,28 +807,73 @@ form input[type="submit"] {
     border-radius: 3px;
     cursor: pointer;
     padding: 0.3rem 0.6rem;
-  }
+}
   
   /* Spotlights container */
-  .spotlights {
+.spotlights {
     margin: 2rem 0;
-  }
+}
   
   /* Individual spotlight card */
-  .spotlight {
-    border: 1px solid #eee;
+.spotlight {
+     
+    background-color: #fff8dc; 
+    border: 2px solid #f9a602; 
+    border-radius: 8px;
     padding: 1rem;
     margin: 1rem 0;
-    border-radius: 5px;
     text-align: center;
-  }
-  .spotlight img {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.spotlights {
+    margin: 2rem 0;
+}
+  
+.spotlight {
+    background-color: #fff8dc;  
+    border: 2px solid #f9a602;  
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    
+    color: #472400;
+  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.spotlight:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+ 
+.spotlight img {
     max-width: 100%;
     height: auto;
-  }
-  .spotlight h3 {
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+  
+.spotlight h3 {
     margin: 0.5rem 0;
-  }
+}
+  
+.spotlight p {
+    margin: 0.5rem 0;
+}
+  
+.spotlight a {
+    color: #00336F;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.spotlight a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background-color: var(--primary-color);
     color: #fff;
