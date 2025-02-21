@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         alt="${member.name}" 
                         class="member-image" 
                         loading="lazy"
-                        width="300" 
-                        height="200"
+                        width="550" 
+                        height="550"
                     >
                     <h2>${member.name}</h2>
                     <p><strong>Address:</strong> ${member.address}</p>
