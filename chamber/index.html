@@ -6,19 +6,19 @@
   <meta name="description" content="WDD 230 - Web Interface Development | Course Assignment Portal | Christian Castillo">
   <meta name="author" content="Christian Castillo">
   <title>Home Page Otavalo's Chamber of Commerce</title>
+
   <meta property="og:title" content="Home Page Otavalo's Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://crispol12.github.io/wdd230/chamber/index.html">
   <meta property="og:image" content="https://www.metropolitan-touring.com/wp-content/uploads/2023/05/otavalo-market.webp">
   <meta property="og:image:alt" content="Plaza de los Ponchos, Otavalo, Imbabura, Ecuador">
   <meta property="og:description" content="Otavalo's Chamber of Commerce is a private institution that helps businesses become visible to the world. Welcome to the gateway to the world that will take your business to another level of growth.">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="styles_chamber/normalize.css">
-
   <link rel="stylesheet" href="styles_chamber/base.css">
   <link rel="stylesheet" href="styles_chamber/larger.css">
   <link rel="icon" href="images/favicon_ota.ico">
-  
 </head>
 <body>
     <header>
@@ -33,13 +33,19 @@
               <span></span>
             </button>
             <ul class="menu" id="nav-menu">
-                <li><a href="https://crispol12.github.io/wdd230/chamber/index.html">Home</a></li>
-                <li><a href="https://crispol12.github.io/wdd230/chamber/discover.html">Discover</a></li>
-                <li><a href="https://crispol12.github.io/wdd230/chamber/directory.html">Directory</a></li>
-                <li><a href="https://crispol12.github.io/wdd230/chamber/join.html">Join</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- ADDED CODE: Banner -->
+    <div id="meet-banner" style="display: none;">
+      <p>We invite you to the Chamber of Commerce <strong>meet and greet</strong> on Wednesday at 7:00 p.m.!</p>
+      <button id="close-banner">❌</button>
+    </div>
 
     <main>
         <section class="hero">
@@ -70,6 +76,8 @@
               <p>Details about the fourth news item.</p>
             </div>
           </div>
+        </section>
+
         <section class="biography-weather">
             <div class="biography">
               <h2>Biography</h2>
@@ -82,26 +90,35 @@
               <p id="weather-info">
                 <img id="icon" src="" alt="Weather Icon" style="vertical-align: middle;">
                 <span id="temp">--°C</span> - <span id="desc">--</span>
+              </p>
               <p class="visits">👥 Visits: 0</p>
             </div>
-          </section>
-          <section class="featured-businesses">
-            <h2>Featured Businesses</h2>
-            <div class="businesses-grid">
-              <div class="business-card">
-                <h3>Business 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore our products and services.</p>
-              </div>
-              <div class="business-card">
-                <h3>Business 2</h3>
-                <p>High-quality services and innovative solutions tailored to meet your needs.</p>
-              </div>
-              <div class="business-card">
-                <h3>Business 3</h3>
-                <p>Your trusted partner in providing exceptional value and customer satisfaction.</p>
-              </div>
+        </section>
+
+        <section class="featured-businesses">
+          <h2>Featured Businesses</h2>
+          <div class="businesses-grid">
+            <div class="business-card">
+              <h3>Business 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore our products and services.</p>
             </div>
-          </section>
+            <div class="business-card">
+              <h3>Business 2</h3>
+              <p>High-quality services and innovative solutions tailored to meet your needs.</p>
+            </div>
+            <div class="business-card">
+              <h3>Business 3</h3>
+              <p>Your trusted partner in providing exceptional value and customer satisfaction.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ADDED CODE: Spotlights -->
+        <section class="spotlights" id="spotlights-container">
+          <h2>Member Spotlights</h2>
+          <!-- Dynamically filled by JavaScript -->
+        </section>
+
         <section class="cta">
             <h2>Otavalo Chamber of Commerce, the best decision</h2>
             <p>Join us on this path of community and enriching experience in the best community of Otavalo.</p>
@@ -136,7 +153,6 @@
               </div>
             </div>
         </section>
-          
     </main>
 
     <footer>
@@ -144,8 +160,10 @@
         <p>Designed by Christian Castillo | WDD 230 Project | <span id="lastModified"></span></p>
     </footer>
 
+    <!-- Your existing scripts -->
     <script src="scripts_chamber/main.js"></script>
     <script src="scripts_chamber/weather.js"></script>
+    <script src="scripts_chamber/spotlight.js"></script>
 
 </body>
 </html>
