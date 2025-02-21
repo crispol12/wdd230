@@ -3,12 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             const directory = document.getElementById('member-directory');
-            // Access the 'members' array inside the JSON
             data.members.forEach(member => {
                 const memberElement = document.createElement('div');
                 memberElement.className = 'member-card';
                 memberElement.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}" class="member-image" loading="lazy">
+                    <!-- Ajustamos la imagen: quitamos estilos inline y añadimos width/height -->
+                    <img 
+                        src="images/${member.image}" 
+                        alt="${member.name}" 
+                        class="member-image" 
+                        loading="lazy"
+                        width="300" 
+                        height="200"
+                    >
                     <h2>${member.name}</h2>
                     <p><strong>Address:</strong> ${member.address}</p>
                     <p><strong>Phone:</strong> ${member.phone}</p>
