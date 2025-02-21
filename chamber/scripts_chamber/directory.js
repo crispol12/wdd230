@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 const memberElement = document.createElement('div');
                 memberElement.className = 'member-card';
                 memberElement.innerHTML = `
+                    <!-- Ajustamos la imagen: quitamos estilos inline y añadimos width/height -->
+                    <img 
                         src="images/${member.image}" 
                         alt="${member.name}" 
                         class="member-image" 
                         loading="lazy"
+                        width="300" 
+                        height="200"
                     >
                     <h2>${member.name}</h2>
                     <p><strong>Address:</strong> ${member.address}</p>
