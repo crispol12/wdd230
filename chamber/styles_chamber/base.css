@@ -769,24 +769,23 @@ form input[type="submit"] {
 }
 
 #view-controls button {
-    padding: 10px 20px; /* Padding inside the buttons */
-    font-size: 1em; /* Font size */
-    color: #fff; /* Text color */
-    background-color: #007BFF; /* Background color */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: #00509E;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #view-controls button:hover {
-    background-color: #0056b3; /* Darker background on hover */
+    background-color: #003C78;
 }
 
 #view-controls button:active {
-    background-color: #004080; /* Even darker background on click */
+    background-color: #002C59;
 }
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: #fff;
