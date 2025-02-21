@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('members.json')
+    fetch('data/members.json')
         .then(response => response.json())
         .then(data => {
             const directory = document.getElementById('member-directory');
