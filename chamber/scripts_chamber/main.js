@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const today = new Date().getDay();
 
     if (today === 1 || today === 2 || today === 3) {
-      meetBanner.style.display = 'block';
+      meetBanner.style.display = 'block'; 
     }
 
     closeBannerBtn.addEventListener('click', () => {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
           spotlightsContainer.appendChild(spotlightDiv);
         });
 
-        // Lazy Loading para las imágenes
+        // Lazy Loading 
         const lazyImages = document.querySelectorAll('img.lazy');
         if (lazyImages.length > 0) {
           const observer = new IntersectionObserver((entries, observer) => {
@@ -207,10 +207,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 const img = entry.target;
                 const dataSrc = img.getAttribute('data-src');
                 if (dataSrc) {
-                  img.src = dataSrc; // Cambia data-src a src
-                  img.classList.remove('lazy'); // Elimina la clase lazy
-                  img.classList.add('loaded'); // Añade la clase loaded
-                  observer.unobserve(img); // Deja de observar la imagen
+                  img.src = dataSrc;
+                  img.classList.remove('lazy'); 
+                  img.classList.add('loaded'); 
+                  observer.unobserve(img); 
                 }
               }
             });
