@@ -188,7 +188,13 @@ fetch('data/members.json')
       spotlightDiv.classList.add('spotlight');
 
       spotlightDiv.innerHTML = `
-        <img src="${member.image}" alt="${member.name}">
+        <img 
+          data-src="images/${member.image}" 
+          alt="${member.name}" 
+          class="lazy" 
+          width="300" 
+          height="200"
+        >
         <h3>${member.name}</h3>
         <p><strong>Address:</strong> ${member.address}</p>
         <p><strong>Phone:</strong> ${member.phone}</p>
@@ -198,6 +204,27 @@ fetch('data/members.json')
 
       spotlightsContainer.appendChild(spotlightDiv);
     });
+
+    // Lazy Loading para las imágenes
+    const lazyImages = document.querySelectorAll('img.lazy');
+    if (lazyImages.length > 0) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const dataSrc = img.getAttribute('data-src');
+            if (dataSrc) {
+              img.src = dataSrc; // Cambia data-src a src
+              img.classList.remove('lazy'); // Elimina la clase lazy
+              img.classList.add('loaded'); // Añade la clase loaded
+              observer.unobserve(img); // Deja de observar la imagen
+            }
+          }
+        });
+      }, { rootMargin: '100px 0px', threshold: 0.1 });
+
+      lazyImages.forEach(image => observer.observe(image));
+    }
   })
   .catch(error => {
     console.error('Error fetching members:', error);
