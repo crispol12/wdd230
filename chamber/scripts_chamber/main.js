@@ -137,96 +137,90 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       generateCalendar(currentMonth, currentYear);
     });
-    document.addEventListener("DOMContentLoaded", () => {
-      const timestampField = document.getElementById("timestamp");
-      const now = new Date();
-      timestampField.value = now.toISOString();
-    });
 
     // Generate the initial calendar
     generateCalendar(currentMonth, currentYear);
   }
-  
-//  1) Banner
-const meetBanner = document.getElementById('meet-banner');
-const closeBannerBtn = document.getElementById('close-banner');
-const today = new Date().getDay(); 
 
-if (today === 1 || today === 2 || today === 3) {
-  meetBanner.style.display = 'block';
-}
+  // 1) Banner
+  const meetBanner = document.getElementById('meet-banner');
+  const closeBannerBtn = document.getElementById('close-banner');
 
-closeBannerBtn.addEventListener('click', () => {
-  meetBanner.style.display = 'none';
-});
+  if (meetBanner && closeBannerBtn) {
+    const today = new Date().getDay();
 
-
-//  2) Spotlights
-
-fetch('data/members.json') 
-  .then(response => response.json())
-  .then(data => {
-   
-    const filteredMembers = data.members.filter(member =>
-      member.membership === 'Silver' || member.membership === 'Gold'
-    );
-
-    function shuffleArray(array) {
-      array.sort(() => 0.5 - Math.random());
+    if (today === 1 || today === 2 || today === 3) {
+      meetBanner.style.display = 'block';
     }
-    shuffleArray(filteredMembers);
 
-  
-    const randomCount = Math.random() < 0.5 ? 2 : 3;
-    const spotlightMembers = filteredMembers.slice(0, randomCount);
-
-
-    const spotlightsContainer = document.getElementById('spotlights-container');
-
-    spotlightMembers.forEach(member => {
-      const spotlightDiv = document.createElement('div');
-      spotlightDiv.classList.add('spotlight');
-
-      spotlightDiv.innerHTML = `
-        <img 
-          data-src="images/${member.image}" 
-          alt="${member.name}" 
-          class="lazy" 
-          width="300" 
-          height="200"
-        >
-        <h3>${member.name}</h3>
-        <p><strong>Address:</strong> ${member.address}</p>
-        <p><strong>Phone:</strong> ${member.phone}</p>
-        <p><strong>Description:</strong> ${member.description}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
-
-      spotlightsContainer.appendChild(spotlightDiv);
+    closeBannerBtn.addEventListener('click', () => {
+      meetBanner.style.display = 'none';
     });
+  }
 
-    // Lazy Loading para las imágenes
-    const lazyImages = document.querySelectorAll('img.lazy');
-    if (lazyImages.length > 0) {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            const dataSrc = img.getAttribute('data-src');
-            if (dataSrc) {
-              img.src = dataSrc; // Cambia data-src a src
-              img.classList.remove('lazy'); // Elimina la clase lazy
-              img.classList.add('loaded'); // Añade la clase loaded
-              observer.unobserve(img); // Deja de observar la imagen
-            }
-          }
+  // 2) Spotlights
+  const spotlightsContainer = document.getElementById('spotlights-container');
+  if (spotlightsContainer) {
+    fetch('data/members.json')
+      .then(response => response.json())
+      .then(data => {
+        const filteredMembers = data.members.filter(member =>
+          member.membership === 'Silver' || member.membership === 'Gold'
+        );
+
+        function shuffleArray(array) {
+          array.sort(() => 0.5 - Math.random());
+        }
+        shuffleArray(filteredMembers);
+
+        const randomCount = Math.random() < 0.5 ? 2 : 3;
+        const spotlightMembers = filteredMembers.slice(0, randomCount);
+
+        spotlightMembers.forEach(member => {
+          const spotlightDiv = document.createElement('div');
+          spotlightDiv.classList.add('spotlight');
+
+          spotlightDiv.innerHTML = `
+            <img 
+              data-src="images/${member.image}" 
+              alt="${member.name}" 
+              class="lazy" 
+              width="300" 
+              height="200"
+            >
+            <h3>${member.name}</h3>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Description:</strong> ${member.description}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+          `;
+
+          spotlightsContainer.appendChild(spotlightDiv);
         });
-      }, { rootMargin: '100px 0px', threshold: 0.1 });
 
-      lazyImages.forEach(image => observer.observe(image));
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching members:', error);
-  });
+        // Lazy Loading para las imágenes
+        const lazyImages = document.querySelectorAll('img.lazy');
+        if (lazyImages.length > 0) {
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                const dataSrc = img.getAttribute('data-src');
+                if (dataSrc) {
+                  img.src = dataSrc; // Cambia data-src a src
+                  img.classList.remove('lazy'); // Elimina la clase lazy
+                  img.classList.add('loaded'); // Añade la clase loaded
+                  observer.unobserve(img); // Deja de observar la imagen
+                }
+              }
+            });
+          }, { rootMargin: '100px 0px', threshold: 0.1 });
+
+          lazyImages.forEach(image => observer.observe(image));
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching members:', error);
+      });
+  }
 });
