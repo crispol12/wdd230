@@ -886,16 +886,16 @@ footer {
         padding: 0.5rem; /* Reduce padding */
     }
     .hero-text {
-        top: 25%; /* Ajusta la posición del texto en pantallas pequeñas */
-        padding: 0.5rem; /* Reduce el padding */
+        top: 35%; 
+        padding: 0.5rem; 
     }
 
     .hero-text h1 {
-        font-size: 2rem; /* Reduce el tamaño de la fuente del título */
+        font-size: 1.5rem; 
     }
 
     .hero-text p {
-        font-size: 1rem; /* Reduce el tamaño de la fuente del párrafo */
+        font-size: 0.9rem;
     }
 
     /* Adjustments for the sidebar */
@@ -973,15 +973,15 @@ footer {
 }
 @media (max-width: 300px) {
     .hero-text {
-        top: 30%; /* Ajusta la posición del texto en pantallas muy pequeñas */
+        top: 50%; /* Ajusta la posición del texto en pantallas muy pequeñas */
     }
 
     .hero-text h1 {
-        font-size: 1.5rem; /* Reduce aún más el tamaño de la fuente del título */
+        font-size: 1.0rem; /* Reduce aún más el tamaño de la fuente del título */
     }
 
     .hero-text p {
-        font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente del párrafo */
+        font-size: 0.7rem; /* Reduce aún más el tamaño de la fuente del párrafo */
     }
     
     .member-card h2 {
