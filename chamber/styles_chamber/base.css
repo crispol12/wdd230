@@ -881,7 +881,49 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+@media (max-width: 500px) {
+    /* Header */
+    header {
+        padding: 0.5rem; /* Reduce el padding */
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+    }
+
+    header .logo img {
+        width: 80px; /* Reduce el tamaño del logo */
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+        margin-top: 0.5rem; /* Ajusta el margen superior */
+    }
+
+    nav ul.menu {
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        gap: 0.5rem; /* Reduce el espacio entre enlaces */
+    }
+
+    nav ul.menu li a {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        padding: 0.3rem 0.6rem; /* Reduce el padding */
+    }
+
+    .hamburger {
+        top: 1rem; /* Ajusta la posición del botón hamburguesa */
+        right: 0.5rem; /* Ajusta la posición del botón hamburguesa */
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.5rem; /* Reduce el padding */
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+    }
+
+    footer p {
+        margin: 0.3rem 0; /* Reduce el margen entre párrafos */
+    }
 @media (max-width: 300px) {
+    
     .member-card h2 {
         font-size: 1em; /* Smaller font size for small views */
     }
@@ -898,4 +940,6 @@ footer {
         flex-direction: column; /* Changes to a column in small views */
         align-items: flex-start; /* Aligns content to the left */
     }
+   
+}
 }
